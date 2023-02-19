@@ -5,12 +5,12 @@
 export const needsTest = (array: any, key: any) => {
   let foundKey = false;
   for (let i = 0; i < array.length; i++) {
-    if (key === array[i]) {
+    if (key === array[i]) { // Checking type here
       array.splice(i, 1);
       foundKey = true;
     }
   }
-  if (foundKey == false) {
+  if (foundKey == false) { // No need to check type here since we set it
     return false;
   } else {
     return array;

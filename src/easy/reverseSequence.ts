@@ -4,5 +4,9 @@
 // EXAMPLE:
 // n=5 //returns [5,4,3,2,1]
 export const reverseSeq = (n: number) => {
-  return false;
+  const returnArray = [];
+  for (let i = n; i > 0; i--) {
+    returnArray.push(i);
+  }
+  return returnArray;
 };

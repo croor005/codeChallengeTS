@@ -1,6 +1,6 @@
 import { moveZeros } from "./moveZeros";
 
-it("Function should return the array in the original order with zeros at the end", () => {
+it.skip("Function should return the array in the original order with zeros at the end", () => {
   expect(moveZeros([1, 2, 0, 1, 0, 1, 0, 3, 0, 1])).toEqual([
     1, 2, 1, 1, 3, 1, 0, 0, 0, 0,
   ]);

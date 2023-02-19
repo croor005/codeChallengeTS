@@ -1,6 +1,6 @@
 import { longestWord } from "./longestWord";
 
-it.skip("Function should return the longest word", () => {
+it("Function should return the longest word", () => {
   expect(longestWord("a b c def")).toEqual("def");
   expect(longestWord("a b c d each")).toEqual("each");
   expect(longestWord("each step")).toEqual("step");

@@ -14,5 +14,15 @@ export const getConsecutiveItems = (
   items: string | number,
   key: string | number
 ) => {
-  return false;
+  let consecutiveCount = 0;
+  if (typeof items !== "number") {
+    const itemsArray = items.split("");
+
+    for (let i = 0; i < itemsArray.length; i++) {
+      if (key === itemsArray[i + 1]) {
+        consecutiveCount++;
+      }
+    }
+  }
+  return consecutiveCount;
 };

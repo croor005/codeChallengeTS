@@ -2,17 +2,20 @@
 // this function should remove any items from the original array that match the key
 // if no values match the key, false should be returned
 
-export const needsTest = (array: any, key: any) => {
+export const needsTest = (
+  enteredArray: string[] | number[] | (string | number)[],
+  key: string | number
+) => {
   let foundKey = false;
-  for (let i = 0; i < array.length; i++) {
-    if (key === array[i]) { // Checking type here
-      array.splice(i, 1);
+  for (let i = 0; i < enteredArray.length; i++) {
+    if (key === enteredArray[i]) {
+      enteredArray.splice(i, 1);
       foundKey = true;
     }
   }
-  if (foundKey == false) { // No need to check type here since we set it
+  if (!foundKey) {
     return false;
   } else {
-    return array;
+    return enteredArray;
   }
 };

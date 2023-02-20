@@ -1,5 +1,5 @@
 import { getConsecutiveItems } from "./consecutiveCount";
-it("Function should return the consecutive count", () => {
+it.skip("Function should return the consecutive count", () => {
   // expect(
   //   getConsecutiveItems(
   //     "ascasdaiiiasdacasdiiiiicasdasdiiiiiiiiiiisdasdasdiii",

@@ -7,5 +7,22 @@
 export const moveZeros = (
   arr: (string | number | boolean | null | object | Array<[]>)[]
 ) => {
-  return false;
+  let foundKey = false;
+  const key = 0;
+  let foundCount = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (key === arr[i]) {
+      arr.splice(i, 1);
+      foundKey = true;
+      foundCount++;
+    }
+  }
+  if (!foundKey) {
+    return false;
+  } else {
+    for (let j = 0; j < foundCount; j++) {
+      arr.push(key);
+    }
+    return arr;
+  }
 };
